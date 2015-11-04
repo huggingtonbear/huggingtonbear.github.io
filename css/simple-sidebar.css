@@ -15,19 +15,18 @@
 }
 
 #wrapper.toggled {
-    padding-right: 250px;
+    padding-left: 250px;
 }
 
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
-    overflow: hidden;
-    right: 250px;
+    left: 250px;
     width: 0;
     height: 100%;
-    margin-right: -250px;
+    margin-left: -250px;
     overflow-y: auto;
-    background: #2c3033;
+    background: #F4F4F4;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -42,6 +41,10 @@
     width: 100%;
     position: absolute;
     padding: 15px;
+    -webkit-box-shadow: -3px 0px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: -3px 0px 5px 0px rgba(0,0,0,0.25);
+    box-shadow: -3px 0px 5px 0px rgba(0,0,0,0.25);
+    z-index: 2000;
 }
 
 #wrapper.toggled #page-content-wrapper {
@@ -60,25 +63,26 @@
     list-style: none;
 }
 
-.sidebar-nav .list-group-item {
-    padding-left: 35px;
-}
-
 .sidebar-nav li {
-    line-height: 25px;
-    color: #fff;
+    text-indent: 20px;
+    line-height: 40px;
+    
 }
 
 .sidebar-nav li a {
-    display: inline;
+    display: block;
     text-decoration: none;
-    color: #fff;
+    color: #999999;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: 15px;
 }
 
-
-.sidebar-nav li:hover {
+.sidebar-nav li a:hover {
     text-decoration: none;
-    background: rgba(255,255,255,0.2);
+    color: #333;
+    background: rgba(0,0,0,0.2);
 }
 
 .sidebar-nav li a:active,
@@ -86,14 +90,33 @@
     text-decoration: none;
 }
 
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+    padding-right: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
 
-@media(min-width:992px) {
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
     #wrapper {
-        padding-right: 250px;
+        padding-left: 250px;-
     }
 
     #wrapper.toggled {
-        padding-right: 0;
+        padding-left: 0;
     }
 
     #sidebar-wrapper {
@@ -111,43 +134,6 @@
 
     #wrapper.toggled #page-content-wrapper {
         position: relative;
-        margin-left: 0;
+        margin-right: 0;
     }
-}
-
-@media(min-width:1200px) {
-    #wrapper.toggled {
-        padding-right: 400px;
-    }
-
-    #wrapper {
-        padding-right: 400px;
-    }
-
-    #sidebar-wrapper {
-        right: 400px;
-        margin-right: -400px;
-        width: 400px;
-    }
-
-    #wrapper.toggled #sidebar-wrapper {
-        width: 0;
-    }
-
-    #wrapper.toggled #page-content-wrapper {
-        margin-right: -400px;
-    }
-
-    /* Sidebar Styles */
-
-    .sidebar-nav {
-        width: 400px;
-    }
-
-    #wrapper.toggled #page-content-wrapper {
-    position: absolute;
-    margin-right: -400px;
-    }
-
-    
 }

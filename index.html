@@ -42,152 +42,77 @@
 
     <div id="wrapper">
 
-        <!-- Top Nav Bar -->
-        <nav class="navbar navbar-default navbar-fixed-top">
-
-            <div class="nav navbar-nav">
-              <a class="navbar-brand hidden-nav-icon pull-left" href="home.html"><img class="main-icon lazy" data-original="images/pl-icon.png"/></a>
-              <a class="navbar-brand pull-right" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg nav-icon"></i> </a>
-              <p class="navbar-text navbar-title"> Learning C++ by Creating Games with UE4 </p>  
-            </div>
-
-        </nav>
-
-
-
+        
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
-            <ul class="sidebar-nav list-group navList">
-                <!-- Login Container -->
-                <nav class="navbar navbar-default">
-                    <div class="nav navbar-nav">
-                        <ul class="nav navbar-nav navbar-right">
-                          <a href="#" class="dropdown-toggle navbar-text logout-nav" data-toggle="dropdown" role="button" aria-expanded="false">Signed in as Oli Huggins <span class="caret"></span></a>
-                          <ul class="dropdown-menu logout-dropdown" role="menu">
-                            <li><a href="index-lo.html" class="logout-link"><i class="fa fa-sign-out mr20"></i>Logout</a></li>
-                          </ul>
-                        </ul> 
-                    </div>
-                </nav>
-                <!-- Login Container End-->
-                    <form class="sidebar-search">
-                        <input type="text" class="form-control" placeholder="Search this title and others..." id="box">
-                    </form>   
-                <a href="front-page.html"> <li class="list-group-item">Learning C++ by Creating Games with UE4</li></a>
-                <a href="#"> <li class="list-group-item">Preface</li></a>
-                <a href="#"> <li class="list-group-item">Chapter 1. Preparing your Data</li></a>
-
-                <a href="#">
-                    <li class="list-group-item"> Chapter 2. Driving Visual Analysis with Automated Automobiles</li> 
-                </a>
-                
-                <a href="#">
-                    <li class="list-group-item active"> Chapter 3. Looping</li> 
-                </a>
-
-                <!-- Chapter 3 Sub-sections -->
-
-                        <a href="for-loop.html"><li class="list-group-item section-sidebar">The for loop</li></a>
-                        <a href="#"><li class="list-group-item section-sidebar">The for/while loop</li></a>
-                        <a href="#"><li class="list-group-item section-sidebar">The 'if' loop</li></a>
-                        <a href="#"><li class="list-group-item section-sidebar">Looping with Unreal Engine</li></a>
-                
-                <!-- End Chapter 3 Sub-sections -->
-
-                <a href="#"> <li class="list-group-item">Chapter 4. Forms and Entries</li></a>
-                <a href="#"> <li class="list-group-item">Chapter 5. Functions and Macros</li></a>
-                <a href="#"> <li class="list-group-item">Chapter 6. Dynamic Memory Allocation</li></a>
-                <a href="#"> <li class="list-group-item">Chapter 7. If, Else and Switch</li></a>
-                <a href="#"> <li class="list-group-item">Chapter 8. Actors and Roles</li></a>
+            <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                Learning C++ by Creating Games with UE4
+            </li>
+                <li class=""><a href="#">Preface</a></li>
+                <li class=""><a href="#">Chapter 1. Preparing your Data</a></li>
+                <li class=""><a href="#">Chapter 2. Driving Visual Analysis with Automated Automobiles</a></li> 
+                <li class=""><a href="#"> Chapter 3. Looping</a></li> 
+                <li class=""><a href="#">Chapter 4. Forms and Entries</a></li>
+                <li class=""><a href="#">Chapter 5. Functions and Macros</a></li>
+                <li class=""><a href="#">Chapter 6. Dynamic Memory Allocation</a></li>
+                <li class=""><a href="#">Chapter 7. If, Else and Switch</a></li>
+                <li class=""><a href="#">Chapter 8. Actors and Roles</a></li>
             </ul>
         </div>
 
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
-        <div id="page-content-wrapper">
+        <div id="page-content-wrapper"><a class="navbar-brand" style="top: 0px; left: 10px; position: absolute;" href="#menu-toggle" id="menu-toggle"><i style="color:black;" class="fa fa-bars fa-lg nav-icon"></i> </a>
             <div class="reader-container">
 
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-sm-offset-1 col-sm-10">
 
 
-<!-- Title Content -->
+                <!-- Title Content -->
 
                         
 
-                        <div class="section language-markup" lang="en" xml:lang="en" ><div class="titlepage" ><div ><div ><h2 class="section-title"><a id="ch04lvl1sec24" ></a>Chapter 3. Looping</h2></div></div><hr ></div><p >The <code class="" style="">while</code> loop<a id="id147" class="indexterm" ></a> is used to run a section of the code repeatedly. This is useful if you have a set of actions that must be done repeatedly to accomplish some goal. For example, the <code class="" style="">while</code> loop in the following code repeatedly prints the value of the variable <code class="" style="">x</code> as it is incremented from 1 to 5:</p><div class="informalexample" ><pre><code>int x = 1;
-while( x &lt;= 5 ) // may only enter the body of the while when x&lt;=5
+                        <div class="section language-cpp" lang="en" xml:lang="en"><div class="titlepage"><div><div><h2 class="section-title" style="clear: both"><a id="ch04lvl1sec26"></a>The for loop</h2></div></div><hr></div><p>The <a id="id154" class="indexterm"></a>
+<code>for</code> loop has a slightly different anatomy than the <code>while</code> loop, but both are very similar.</p><p>Let's examine the anatomy of a <code>for</code> loop as compared to an equivalent <code>while</code> loop. Take an example of the following code snippets:</p><div class="informaltable"><table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; "><colgroup><col align="left"><col align="left"></colgroup><thead><tr><th style="border-bottom: 0.5pt solid ; " align="left" valign="bottom">
+<p>The for loop</p>
+</th><th style="border-bottom: 0.5pt solid ; " align="left" valign="bottom">
+<p>An equivalent while loop</p>
+</th></tr></thead><tbody><tr><td style="" align="left" valign="top">
+<p>
+</p><div class="informalexample"><pre><code>for( int x = 1; x &lt;= 5; x++ )
 {
-  cout &lt;&lt; "x is " &lt;&lt; x &lt;&lt; endl;
-  x++;
-}
-cout &lt;&lt; "Finished" &lt;&lt; endl;</code></code></pre></div><p >This is the output of the preceding program:</p><div class="informalexample" ><pre><code>x is 1
-x is 2
-x is 3
-x is 4
-x is 5
-Finished</code></pre></div><p >In the first line<a id="id148" class="indexterm" ></a> of code, an integer variable <code class="" style="">x</code> is created and set to 1. Then, we go the <code class="" style="">while</code> condition. The <code class="" style="">while</code> condition says that while <code class="" style="">x</code> is less than or equal to 5, you must stay in the block of code that follows.</p><p >Each iteration of the loop (an iteration means going once around the loop) gets a little more done from the task (of printing the numbers 1 to 5). We program the loop to automatically exit once the task is done (when <code class="" style="">x &lt;= 5</code> is no longer true).</p><p >Similar to the <code class="" style="">if</code> statement of the previous chapter, entry into the block below the <code class="" style="">while</code> loop is only allowed if you meet the condition within the brackets of the <code class="" style="">while</code> loop (in the preceding example, <code class="" style="">x &lt;= 5</code>). You can try mentally subbing an <code class="" style="">if</code> loop in the place of the <code class="" style="">while</code> loop, as shown in the following code:</p><div class="informalexample" ><pre><code>int x = 1;
-if( x &lt;= 5 ) // you may only enter the block below when x&lt;=5
-{
-  cout &lt;&lt; "x is " &lt;&lt; x &lt;&lt; endl;
-  x++;
-}
-cout &lt;&lt; "End of program" &lt;&lt; endl;</code></pre></div><p >The preceding code sample will only print <code class="" style="">x is 1</code>. So, a <code class="" style="">while</code> loop is exactly like an <code class="" style="">if</code> statement, only it has this special property of automatically repeating itself until the condition between the brackets of the <code class="" style="">while</code> loop becomes <code class="" style="">false</code>.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in; font-size: 12px !important;"><h3 class="title" style="font-size: 14px !important;"><a id="note09" style="font-size: 14px !important;"></a>Note</h3><p >I'd like to explain the repetition of the <code class="" style="">while</code> loop using a video game. If you don't know Valve's <span class="emphasis" ><em >Portal</em></span>, you should play it, if only to understand loops. Check out <a class="ulink" href="https://www.youtube.com/watch?v=TluRVBhmf8w" target="_blank" >https://www.youtube.com/watch?v=TluRVBhmf8w</a> for a demo video.</p></div><p >The <code class="" style="">while</code> loops have a kind of magic <span class="emphasis" ><em >portal</em></span> at the bottom, which cause the loop to repeat. The following screenshot illustrates what I mean:</p><div class="mediaobject" ><img class="img-responsive" src="http://packtpub.com/graphics/9781784396572/graphics/6572OT_04_01.jpg" ><div class="caption" ><p >There is a portal at the end of the while loop that takes you back to the beginning</p></div></div><p >In the preceding <a id="id149" class="indexterm" ></a>screenshot, we loop back from the orange portal (marked <span class="strong" ><strong >O</strong></span>) to the blue portal (marked <span class="strong" ><strong >B</strong></span>). This is our first time of being able to go back in the code. It is like time travel, only for the code. How exciting!</p><p >The only way past a <code class="" style="">while</code> loop block is to not meet the entry condition. In the preceding example, once the value of <code class="" style="">x</code> becomes 6 (so, <code class="" style="">x &lt;= 5</code> becomes false), we will not enter the <code class="" style="">while</code> loop again. Since the orange portal is inside the loop, we'll be able to get to finished once <code class="" style="">x</code> becomes 6.</p><div class="section" lang="en" xml:lang="en" ><div class="titlepage" ><div ><div ><h3 class="title" style="font-size: 14px !important;"><a id="ch04lvl2sec41" style="font-size: 14px !important;"></a>Infinite loops</h3></div></div></div><p >You can <a id="id150" class="indexterm" ></a>get stuck inside the same loop forever. Consider the modified program in the following block of code (what do you think will be the output?):</p><div class="informalexample" ><pre><code>int x = 1;
-while( x &lt;= 5 ) // may only enter the body of the while when x&lt;=5
-{
-  cout &lt;&lt; "x is " &lt;&lt; x &lt;&lt; endl;
-}
-cout &lt;&lt; "End of program" &lt;&lt; endl;</code></pre></div><p >This is how the output will look:</p><div class="informalexample" ><pre><code>x is 1
-x is 1
-x is 1
-.
-.
-.
-(repeats forever)</code></pre></div><p >The loop repeats forever because we removed the line of code that changed the value of <code class="" style="">x</code>. If the value of <code class="" style="">x</code> stays the same and is not allowed to increase, we will be stuck inside the body of the <code class="" style="">while</code> loop. This is because the loop's exit condition (the value of <code class="" style="">x</code> becomes 6) cannot be met if <code class="" style="">x</code> does not change inside the loop body.</p><p >The following exercises will use all the concepts from the previous chapters, such as the <code class="" style="">+=</code> and decrement operations. If you've forgotten something, go back and reread the previous sections.</p></div><div class="section" lang="en" xml:lang="en" ><div class="titlepage" ><div ><div ><h3 class="title" style="font-size: 14px !important;"><a id="ch04lvl2sec42" style="font-size: 14px !important;"></a>Exercises</h3></div></div></div><div class="orderedlist" ><ol class="orderedlist arabic" type="1" ><li ><p >Write<a id="id151" class="indexterm" ></a> a <code class="" style="">while</code> loop that will print the numbers from 1 to 10.</p></li><li ><p >Write a <code class="" style="">while</code> loop that will print the numbers from 10 to 1 (backwards).</p></li><li ><p >Write a <code class="" style="">while</code> loop that will print numbers 2 to 20, incrementing by 2 (for example 2, 4, 6, and 8).</p></li><li ><p >Write a <code class="" style="">while</code> loop that will print the numbers 1 to 16 and their squares beside them.</p></li></ol></div><p >The following is an example program output of the exercise 4:</p><div class="informaltable" ><table style="border-collapse: collapse; border-top-width: 0.5pt; border-top-style: solid; border-bottom-width: 0.5pt; border-bottom-style: solid; font-size: 12px !important;"><colgroup ><col align="left" ><col align="left" ></colgroup><tbody ><tr ><td  align="left" valign="top">
-<p >1</p>
-</td><td  align="left" valign="top">
-<p >1</p>
-</td></tr><tr ><td  align="left" valign="top">
-<p >2</p>
-</td><td  align="left" valign="top">
-<p >4</p>
-</td></tr><tr ><td  align="left" valign="top">
-<p >3</p>
-</td><td  align="left" valign="top">
-<p >9</p>
-</td></tr><tr ><td  align="left" valign="top">
-<p >4</p>
-</td><td  align="left" valign="top">
-<p >16</p>
-</td></tr><tr ><td  align="left" valign="top">
-<p >5</p>
-</td><td  align="left" valign="top">
-<p >25</p>
-</td></tr></tbody></table></div></div><div class="section" lang="en" xml:lang="en" ><div class="titlepage" ><div ><div ><h3 class="title" style="font-size: 14px !important;"><a id="ch04lvl2sec43" style="font-size: 14px !important;"></a>Solutions</h3></div></div></div><p >The code solutions of the<a id="id152" class="indexterm" ></a> preceding exercises are as follows:</p><div class="orderedlist" ><ol class="orderedlist arabic" type="1" ><li ><p >The solution of the <code class="" style="">while</code> loop that prints the numbers from 1 to 10 is as follows:</p><div class="informalexample" ><pre><code>int x = 1;
-while( x &lt;= 10 )
+  cout &lt;&lt; x &lt;&lt; endl;
+}</code></pre></div><p>
+</p>
+</td><td style="" align="left" valign="top">
+<p>
+</p><div class="informalexample"><pre><code>int x = 1;
+while( x &lt;= 5 )
 {
   cout &lt;&lt; x &lt;&lt; endl;
   x++;
-}</code></pre></div></li><li ><p >The solution of the <code class="" style="">while</code> loop that prints the numbers from 10 to 1 in backwards is as follows:</p><div class="informalexample" ><pre><code>int x = 10; // start x high
-while( x &gt;= 1 ) // go until x becomes 0 or less
+}</code></pre></div><p>
+</p>
+</td></tr></tbody></table></div><p>The <code>for</code> loop has three statements inside its brackets. Let's examine them in order.</p><p>The first statement of the <code>for</code> loop (<code>int x = 1</code>;) only gets executed once, when we first enter the body of the <code>for</code> loop. It is typically used to initialize the value of the loop's counter variable (in this case, the variable <code>x</code>). The second statement inside the <code>for</code> loop (<code>x &lt;= 5</code>;) is the loop's repeat condition. As long as <code>x &lt;= 5</code>, we must continue to stay inside the body <a id="id155" class="indexterm"></a>of the <code>for</code> loop. The last statement inside the brackets of the <code>for</code> loop (<code>x++</code>;) gets executed after we complete the body of the <code>for</code> loop each time.</p><p>The following sequence of diagrams explain the progression of the <code>for</code> loop:</p><div class="mediaobject"><img class="img-responsive" src="http://packtpub.com/graphics/9781784396572/graphics/6572OT_04_02.jpg"></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch04lvl2sec44"></a>Exercises</h3></div></div></div><div class="orderedlist"><ol class="orderedlist arabic" type="1"><li><p>Write a <code>for</code> loop <a id="id156" class="indexterm"></a>that will gather the sum of the numbers from 1 to 10.</p></li><li><p>Write a <code>for</code> loop that will print the multiples of 6, from 6 to 30 (6, 12, 18, 24, and 30).</p></li><li><p>Write a <code>for</code> loop that will print numbers 2 to 100 in multiples of 2 (for example, 2, 4, 6, 8, and so on).</p></li><li><p>Write a <code>for</code> loop that will print numbers 1 to 16 and their squares beside them.</p></li></ol></div></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch04lvl2sec45"></a>Solutions</h3></div></div></div><p>Here<a id="id157" class="indexterm"></a> are the solutions for the preceding exercises:</p><div class="orderedlist"><ol class="orderedlist arabic" type="1"><li><p>The solution for the <code>for</code> loop for printing the sum of the numbers from 1 to 10 is as follows:</p><div class="informalexample"><pre><code>int sum = 0;
+for( int x = 1; x &lt;= 10; x++ )
+{
+  sum += x;
+  cout &lt;&lt; x &lt;&lt; endl;
+}</code></pre></div></li><li><p>The solution for the <code>for</code> loop for printing multiples of 6 from 30 is as follows:</p><div class="informalexample"><pre><code>for( int x = 6; x &lt;= 30; x += 6 )
 {
   cout &lt;&lt; x &lt;&lt; endl;
-  x--; // take x down by 1
-}</code></pre></div></li><li ><p >The solution of the <code class="" style="">while</code> loop that prints the numbers from 2 to 20 incrementing by 2 is as follows:</p><div class="informalexample" ><pre><code>int x = 2;
-while( x &lt;= 20 )
+}</code></pre></div></li><li><p>The solution for the <code>for</code> loop for printing numbers from 2 to 100 in multiples of 2 is as follows:</p><div class="informalexample"><pre><code>for( int x = 2; x &lt;= 100; x += 2 )
 {
   cout &lt;&lt; x &lt;&lt; endl;
-  x+=2; // increase x by 2's
-}</code></pre></div></li><li ><p >The solution of the <code class="" style="">while</code> loop that prints the numbers from 1 to 16 with their squares is as follows:</p><div class="informalexample" ><pre><code>int x = 1;
-while( x &lt;= 16 )
+}</code></pre></div></li><li><p>The solution for the <code>for</code> loop that prints numbers from 1 to 16 and their squares is as follows:</p><div class="informalexample"><pre><code>for( int x = 1; x &lt;= 16; x++ )
 {
-  cout &lt;&lt; x &lt;&lt; "   " &lt;&lt; x*x &lt;&lt; endl; // print x and it's  square
-  x++;
+  cout &lt;&lt; x &lt;&lt; " " &lt;&lt; x*x &lt;&lt; endl;
 }</code></pre></div></li></ol></div></div></div>
-                    </div>
-                </div>
                 <!-- End of Title Content -->
+
                 <!--Next Section -->
                 <div class="panel panel-default next-section ">
                     <div class="panel-body">

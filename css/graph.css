@@ -82,11 +82,11 @@ body {
   position: relative;
   float: left;
   width: 125px;
-  height: 125px;
+  height: 150px;
   margin: 5px;
   padding: 10px;
   padding-right: 20px;
-  background: #888;
+  background: #2AA09B;
   color: rgba(255,255,255,0.5);
 }
 
@@ -116,7 +116,7 @@ body {
 .element-item .symbol {
   position: absolute;
   left: 10px;
-  top: 0px;
+  top: 5px;
   font-size: 42px;
   font-weight: bold;
   color: white;
@@ -135,13 +135,3 @@ body {
   font-size: 12px;
 }
 
-.element-item.python.complete          { background: #D90000; }
-.element-item.javascript.complete  { background: #04756F; }
-.element-item.angularjs.complete      { background: #FF8C00; }
-.element-item.machinelearning.complete        { background: #FF2D00; }
-.element-item.bigdata.complete      { background: #2E0927; }
-.element-item.python          { background: rgba(217,0,0,0.5); }
-.element-item.javascript  { background: rgba(4,117,111,0.5); }
-.element-item.angularjs      { background: rgba(255,140,0,0.5); }
-.element-item.machinelearning        { background: rgba(255,45,0,0.5); }
-.element-item.bigdata      { background: rgba(46,9,39,0.5); }
